@@ -53,7 +53,7 @@ function askFakeExpletive() {
 function firstAct() {
 	document.getElementById("firstAct").innerHTML = 
 		"<p>Dear " + 
-		name + ", </p><p>I write to you on this " +
+		name + ", </p><p><span class='firstcharacter'>I</span> write to you on this " +
 		nounArray[0].toLowerCase().toLowerCase() + " to apologize. I know I wronged you when I " + 
 		verbPastArray[0].toLowerCase() + " on your very " + 
 		adjArray[0].toLowerCase() + " " +
@@ -62,14 +62,14 @@ function firstAct() {
 		advArray[0].toLowerCase() + ". Nevertheless, I must still apologize. If I may, I feel as if I have a " +
 		adjArray[1].toLowerCase() + " excuse, and feel a " +
 		adjArray[2].toLowerCase() + " need to explain myself.</p>" +
-		"<p>You see, I was " +
+		"<p class='pIndent'>You see, I was " +
 		verbingArray[0].toLowerCase() + " at the local " +
 		nounArray[2].toLowerCase() + " just the other day when all of a sudden a " +
 		nounArray[3].toLowerCase() + " came " +
 		verbingArray[1].toLowerCase() + " right out of the " + 
 		nounArray[4].toLowerCase() + ". What a sight it was to see. I had no other choice but to yell, 'Hey " +
 		properNounArray[0] + "! What is it that you do so " +
-		advArray[1].toLowerCase() + "?'</p> <p>The " +
+		advArray[1].toLowerCase() + "?'</p> <p class='pIndent'>The " +
 		nounArray[3].toLowerCase() + " looked at me, and do you know what he said? Do you know what he " +
 		fakeExpletiveArray[0].toLowerCase() + "ing said?! He said, '" +
 		properNounArray[0].toLowerCase() + "? Who the " +
