@@ -8,6 +8,7 @@ var advArray = [];
 var fakeExpletiveArray = [];
 var toLoad = confirm("This is your story. If you choose to accept this mission, you will be asked for many words in order to finish this story.")
 
+
 //The functions to ask for specific words. It then pushes the word into it's respective array.
 function askNoun() {
 	var noun = prompt("Give me a noun");
@@ -51,9 +52,10 @@ function askFakeExpletive() {
 
 //These push the HTML for the paragraphs for their respective acts
 function firstAct() {
+	var userName = prompt("What is your name?");
 	document.getElementById("firstAct").innerHTML = 
 		"<p>Dear " + 
-		name + ", </p><p><span class='firstcharacter'>I</span> write to you on this " +
+		userName + ", </p><p><span class='firstcharacter'>I</span> write to you on this " +
 		nounArray[0].toLowerCase().toLowerCase() + " to apologize. I know I wronged you when I " + 
 		verbPastArray[0].toLowerCase() + " on your very " + 
 		adjArray[0].toLowerCase() + " " +
@@ -120,7 +122,6 @@ function rejectedThird() {
 
 if (toLoad) {
 	window.onload = function(){
-		var name = prompt("What is your name?");
 		for (var i = 0; i < 5; i++) {
 			askNoun();
 		}
