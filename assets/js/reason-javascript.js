@@ -110,7 +110,7 @@ function rejectedSecond() {
 function rejectedThird() {
 	document.getElementById("thirdAct").innerHTML = 
 	"<p>You might as well just look at this picture of me and my son. Maybe now you'll know who you're hurting by rejecting us.</p>" +
-	'<img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/16509004_1769311333094563_4580768491130628496_n.jpg?oh=7f6f50af13d6522da919ad0522d2efc6&oe=5942D812" alt=Scott>';
+	'<img src="assets/images/Scott.jpg" alt=Scott>';
 }
 
 
