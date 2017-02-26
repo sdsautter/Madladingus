@@ -6,7 +6,7 @@ var verbingArray = [];
 var adjArray = [];
 var advArray = [];
 var fakeExpletiveArray = [];
-var name = prompt("What is your name?");
+var toLoad = confirm("This is your story. If you choose to accept this mission, you will be asked for many words in order to finish this story.")
 
 //The functions to ask for specific words. It then pushes the word into it's respective array.
 function askNoun() {
@@ -97,41 +97,67 @@ function firstAct() {
 // 		".</p>" ;
 // }
 
-window.onload = function(){
-for (var i = 0; i < 5; i++) {
-	askNoun();
+function rejectedFirst() {
+	document.getElementById("firstAct").innerHTML =
+	"<p>I put together this great ad-liberating story, and you choose to just skip it? I thought we were pals. You will <strong>rue</strong> this day.</p>" ;
 }
 
-for (var i = 0; i < 1; i++) {
-	askVerbPast();
+function rejectedSecond() {
+	document.getElementById("secondAct").innerHTML = 
+	"<p>And to think that I thought we were getting on so well. I was going to ask you if you wanted to vacation with me. I was even going to offer to pay. It's too late. Don't even bother trying to reload this page to appease me. It's not going to work. I'm going to know. You will never extract my vacation money from me now.</p>";
 }
 
-for (var i = 0; i < 3; i++) {
-	askAdj();
+function rejectedThird() {
+	document.getElementById("thirdAct").innerHTML = 
+	"<p>You might as well just look at this picture of me and my son. Maybe now you'll know who you're hurting by rejecting us.</p>" +
+	'<img src="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/16509004_1769311333094563_4580768491130628496_n.jpg?oh=7f6f50af13d6522da919ad0522d2efc6&oe=5942D812" alt=Scott>';
 }
 
-for (var i = 0; i < 2; i++) {
-	askAdv();
-}
 
-for (var i = 0; i < 2; i++) {
-	askVerbing();
-}
 
-for (var i = 0; i < 1; i++) {
-	askProNoun();
-}
 
-for (var i = 0; i < 1; i++) {
-	askFakeExpletive();
-}
+if (toLoad) {
+	window.onload = function(){
+		var name = prompt("What is your name?");
+		for (var i = 0; i < 5; i++) {
+			askNoun();
+		}
 
-for (var i = 0; i < 1; i++) {
-	askVerbPresent();
-}
+		for (var i = 0; i < 1; i++) {
+			askVerbPast();
+		}
 
-firstAct();
-// secondAct();
-// thirdAct();
- 
-}
+		for (var i = 0; i < 3; i++) {
+			askAdj();
+		}
+
+		for (var i = 0; i < 2; i++) {
+			askAdv();
+		}
+
+		for (var i = 0; i < 2; i++) {
+			askVerbing();
+		}
+
+		for (var i = 0; i < 1; i++) {
+			askProNoun();
+		}
+
+		for (var i = 0; i < 1; i++) {
+			askFakeExpletive();
+		}
+
+		for (var i = 0; i < 1; i++) {
+			askVerbPresent();
+		}
+
+		firstAct();
+		// secondAct();
+		// thirdAct();
+		 
+		}
+	} else {
+		rejectedFirst();
+		rejectedSecond();
+		rejectedThird();
+	}

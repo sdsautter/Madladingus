@@ -1,9 +1,10 @@
 body {
 	background-image: url("../images/background.jpg");
+	background-color: #0a4975;
 }
 
-body, html {
-	height: 100%;
+html {
+	min-height: 100%;
 }
 
 .navbar {
@@ -49,7 +50,13 @@ body, html {
 	text-align: center;
 }
 
+.act img {
+	width: 100%;
+	clear: both;
+}
+
 .footer {
+	bottom: 0;
 	text-align: center;
 	background-color: black;
 	color: white;
