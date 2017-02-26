@@ -6,7 +6,7 @@ var verbingArray = [];
 var adjArray = [];
 var advArray = [];
 var fakeExpletiveArray = [];
-var toLoad = confirm("This is your story. If you choose to accept this mission, you will be asked for many words in order to finish this story.")
+var toLoad = confirm("This is your story. If you choose to accept this mission, you will be asked for many words in order to finish this story. You may even get up to 5 requests for one category, like nouns.")
 
 
 //The functions to ask for specific words. It then pushes the word into it's respective array.
