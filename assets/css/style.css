@@ -7,10 +7,27 @@ body {
 	z-index: 99;
 }
 
-.act {
+.navbar-brand {
+	font-family: 'Indie Flower', cursive;
+	font-size: 1.8em;
+}
+
+.dropdown-menu .active {
+	background-color: #8CA5B4;
+}
+
+.wrapper {
+	height: 100%;
+}
+
+.act, #welcome {
 	background-color: white;
 	padding: 2%;
 	opacity: .68;
+}
+
+.act {
+	margin-top: 2%;
 }
 
 .madladingus-title {
@@ -22,4 +39,16 @@ body {
 
 .act:hover {
 	opacity: 1;
+}
+
+.act h4 {
+	text-align: center;
+}
+
+.footer {
+	text-align: center;
+	background-color: black;
+	color: white;
+	padding: 1.5% 0 1% 0;
+	border-top: 1px double-line white;
 }
