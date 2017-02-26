@@ -103,17 +103,17 @@ function firstAct() {
 //This will show up if they cancel the original confirmation
 function rejectedFirst() {
 	document.getElementById("firstAct").innerHTML =
-	"<p>I put together this great ad-liberating story, and you choose to just skip it? I thought we were pals. You will <strong>rue</strong> this day.</p>" ;
+	"<p class='pIndent'>I put together this great ad-liberating story, and you choose to just skip it? I thought we were pals. You will <strong>rue</strong> this day.</p>" ;
 }
 
 function rejectedSecond() {
 	document.getElementById("secondAct").innerHTML = 
-	"<p>And to think that I thought we were getting on so well. I was going to ask you if you wanted to vacation with me. I was even going to offer to pay. It's too late. Don't even bother trying to reload this page to appease me. It's not going to work. I'm going to know. You will never extract my vacation money from me now.</p>";
+	"<p class='pIndent'>And to think that I thought we were getting on so well. I was going to ask you if you wanted to vacation with me. I was even going to offer to pay. It's too late. Don't even bother trying to reload this page to appease me. It's not going to work. I'm going to know. You will never extract my vacation money from me now.</p>";
 }
 
 function rejectedThird() {
 	document.getElementById("thirdAct").innerHTML = 
-	"<p>You might as well just look at this picture of me and my son. Maybe now you'll know who you're hurting by rejecting us.</p>" +
+	"<p class='pIndent'>You might as well just look at this picture of me and my son. Maybe now you'll know who you're hurting by rejecting us.</p>" +
 	'<img src="assets/images/Scott.jpg" alt=Scott>';
 }
 
