@@ -9,8 +9,15 @@ body {
 
 .act {
 	background-color: white;
-	padding: 1%;
+	padding: 2%;
 	opacity: .68;
+}
+
+.madladingus-title {
+	background-color: #5a8cad;
+	color: #E8E8E8;
+	padding: 1%;
+	border: 1px double black;
 }
 
 .act:hover {
