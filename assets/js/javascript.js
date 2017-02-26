@@ -6,7 +6,6 @@ var verbingArray = [];
 var adjArray = [];
 var advArray = [];
 var fakeExpletiveArray = [];
-var name = prompt("What's your name?");
 
 //The functions to ask for specific words. It then pushes the word into it's respective array.
 function askNoun() {
@@ -97,7 +96,8 @@ function firstAct() {
 // 		".</p>" ;
 // }
 
-
+window.onload = function(){
+var name = prompt("What's your name?");
 askNoun();
 askVerbPast();
 askAdj();
@@ -118,3 +118,5 @@ askVerbPresent();
 firstAct();
 // secondAct();
 // thirdAct();
+ 
+}
