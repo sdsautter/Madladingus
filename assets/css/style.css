@@ -2,10 +2,15 @@ body {
 	background-image: url("http://cdn-media-2.lifehack.org/wp-content/files/2013/04/83.jpg");
 }
 
+.navbar {
+	background-color: #E8EDF0;
+	z-index: 99;
+}
+
 .act {
 	background-color: white;
 	padding: 1%;
-	opacity: .7;
+	opacity: .68;
 }
 
 .act:hover {
