@@ -1,5 +1,5 @@
 var nounArray = [];
-var proNounArray = [];
+var properNounArray = [];
 var verbPresentArray = [];
 var verbPastArray = [];
 var verbingArray = [];
@@ -14,9 +14,9 @@ function askNoun() {
 	nounArray.push(noun);
 }
 
-function askProNoun() {
-	var proNoun = prompt("Give me a pronoun");
-	proNounArray.push(proNoun);
+function askProperNoun() {
+	var properNoun = prompt("Give me a proper noun. Ex: Scott, Scotty, Scottie.");
+	properNounArray.push(properNoun);
 }
 
 function askVerbPresent() {
@@ -68,13 +68,13 @@ function firstAct() {
 		nounArray[3].toLowerCase() + " came " +
 		verbingArray[1].toLowerCase() + " right out of the " + 
 		nounArray[4].toLowerCase() + ". What a sight it was to see. I had no other choice but to yell, 'Hey " +
-		proNounArray[0] + "! What is it that you do so " +
+		properNounArray[0] + "! What is it that you do so " +
 		advArray[1].toLowerCase() + "?'</p> <p>The " +
 		nounArray[3].toLowerCase() + " looked at me, and do you know what he said? Do you know what he " +
 		fakeExpletiveArray[0].toLowerCase() + "ing said?! He said, '" +
 		proNounArray[0].toLowerCase() + "? Who the " +
 		fakeExpletiveArray[0].toLowerCase() + " is " +
-		proNounArray[0] + "? If you're talking to me, you better check yourself before you " +
+		properNounArray[0] + "? If you're talking to me, you better check yourself before you " +
 		verbPresentArray[0].toLowerCase() + " yourself.'</p>"
 		;
 }
@@ -97,6 +97,8 @@ function firstAct() {
 // 		".</p>" ;
 // }
 
+
+//This will show up if they cancel the original confirmation
 function rejectedFirst() {
 	document.getElementById("firstAct").innerHTML =
 	"<p>I put together this great ad-liberating story, and you choose to just skip it? I thought we were pals. You will <strong>rue</strong> this day.</p>" ;
@@ -140,7 +142,7 @@ if (toLoad) {
 		}
 
 		for (var i = 0; i < 1; i++) {
-			askProNoun();
+			askProperNoun();
 		}
 
 		for (var i = 0; i < 1; i++) {
