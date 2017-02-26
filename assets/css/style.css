@@ -1,0 +1,13 @@
+body {
+	background-image: url("http://cdn-media-2.lifehack.org/wp-content/files/2013/04/83.jpg");
+}
+
+.act {
+	background-color: white;
+	padding: 1%;
+	opacity: .7;
+}
+
+.act:hover {
+	opacity: 1;
+}
