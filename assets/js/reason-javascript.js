@@ -72,7 +72,7 @@ function firstAct() {
 		advArray[1].toLowerCase() + "?'</p> <p>The " +
 		nounArray[3].toLowerCase() + " looked at me, and do you know what he said? Do you know what he " +
 		fakeExpletiveArray[0].toLowerCase() + "ing said?! He said, '" +
-		proNounArray[0].toLowerCase() + "? Who the " +
+		properNounArray[0].toLowerCase() + "? Who the " +
 		fakeExpletiveArray[0].toLowerCase() + " is " +
 		properNounArray[0] + "? If you're talking to me, you better check yourself before you " +
 		verbPresentArray[0].toLowerCase() + " yourself.'</p>"
