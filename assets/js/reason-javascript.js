@@ -87,20 +87,20 @@ function firstAct() {
 function secondAct() {
 	askNoun();
 	document.getElementById("secondAct").innerHTML =  
-		"<p>What is " + 
-		nounArray[0].toLowerCase() + 
-		"? The only word I know is " +
+		"<p>Sorry, I don't have a second act yet, but I do have enough to prompt you for " + 
 		nounArray[5].toLowerCase() + 
 		".</p>" ;
 }
 
 function thirdAct() {
 	document.getElementById("thirdAct").innerHTML =  
-		"<p>What is " + 
-		nounArray[0].toLowerCase() + 
-		"? The only word I know is " +
-		nounArray[1].toLowerCase() + 
-		".</p>" ;
+		"<p>You really think I have a first act after showing that I don't have a second act yet? Ha. Idiot. In case you're wondering though, here's all the nouns you've used so far:<br> " + 
+		nounArray[0].toLowerCase() + "<br>" +
+		nounArray[1].toLowerCase() + "<br>" +
+		nounArray[2].toLowerCase() + "<br>" +
+		nounArray[3].toLowerCase() + "<br>" +
+		nounArray[4].toLowerCase() + "<br>" +
+		nounArray[5].toLowerCase()
 }
 
 
