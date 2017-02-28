@@ -6,8 +6,11 @@ var verbingArray = [];
 var adjArray = [];
 var advArray = [];
 var fakeExpletiveArray = [];
+
 var toLoad = confirm("This is your story. If you choose to accept this mission, you will be asked for many words in order to finish this story. You may even get up to 5 requests for one category, like nouns.")
 
+if (toLoad) {
+	
 
 //The functions to ask for specific words. It then pushes the word into it's respective array.
 function askNoun() {
@@ -56,7 +59,7 @@ function firstAct() {
 	document.getElementById("firstAct").innerHTML = 
 		"<p>Dear " + 
 		userName + ", </p><p><span class='firstcharacter'>I</span> write to you on this " +
-		nounArray[0].toLowerCase().toLowerCase() + " to apologize. I know I wronged you when I " + 
+		nounArray[0].toLowerCase() + " to apologize. I know I wronged you when I " + 
 		verbPastArray[0].toLowerCase() + " on your very " + 
 		adjArray[0].toLowerCase() + " " +
 		nounArray[1].toLowerCase() + ". In my defense, I " + 
@@ -81,46 +84,27 @@ function firstAct() {
 		;
 }
 
-// function secondAct() {
-// 	document.getElementById("secondAct").innerHTML =  
-// 		"<p>What is " + 
-// 		nounArray[0].toLowerCase() + 
-// 		"? The only word I know is " +
-// 		nounArray[1].toLowerCase() + 
-// 		".</p>" ;
-// }
-
-// function thirdAct() {
-// 	document.getElementById("thirdAct").innerHTML =  
-// 		"<p>What is " + 
-// 		nounArray[0].toLowerCase() + 
-// 		"? The only word I know is " +
-// 		nounArray[1].toLowerCase() + 
-// 		".</p>" ;
-// }
-
-
-//This will show up if they cancel the original confirmation
-function rejectedFirst() {
-	document.getElementById("firstAct").innerHTML =
-	"<p class='pIndent'>I put together this great ad-liberating story, and you choose to just skip it? I thought we were pals. You will <strong>rue</strong> this day.</p>" ;
+function secondAct() {
+	askNoun();
+	document.getElementById("secondAct").innerHTML =  
+		"<p>What is " + 
+		nounArray[0].toLowerCase() + 
+		"? The only word I know is " +
+		nounArray[5].toLowerCase() + 
+		".</p>" ;
 }
 
-function rejectedSecond() {
-	document.getElementById("secondAct").innerHTML = 
-	"<p class='pIndent'>And to think that I thought we were getting on so well. I was going to ask you if you wanted to vacation with me. I was even going to offer to pay. It's too late. Don't even bother trying to reload this page to appease me. It's not going to work. I'm going to know. You will never extract my vacation money from me now.</p>";
-}
-
-function rejectedThird() {
-	document.getElementById("thirdAct").innerHTML = 
-	"<p class='pIndent'>You might as well just look at this picture of me and my son. Maybe now you'll know who you're hurting by rejecting us.</p>" +
-	'<img src="assets/images/Scott.jpg" alt=Scott>';
+function thirdAct() {
+	document.getElementById("thirdAct").innerHTML =  
+		"<p>What is " + 
+		nounArray[0].toLowerCase() + 
+		"? The only word I know is " +
+		nounArray[1].toLowerCase() + 
+		".</p>" ;
 }
 
 
 
-
-if (toLoad) {
 	window.onload = function(){
 		for (var i = 0; i < 5; i++) {
 			askNoun();
@@ -153,13 +137,29 @@ if (toLoad) {
 		for (var i = 0; i < 1; i++) {
 			askVerbPresent();
 		}
-
+	
 		firstAct();
-		// secondAct();
-		// thirdAct();
-		 
-		}
+	}
+	
 	} else {
+		//This will show up if they cancel the original confirmation
+function rejectedFirst() {
+	document.getElementById("firstAct").innerHTML =
+	"<p class='pIndent'>I put together this great ad-liberating story, and you choose to just skip it? I thought we were pals. You will <strong>rue</strong> this day.</p>" ;
+}
+
+function rejectedSecond() {
+	document.getElementById("secondAct").innerHTML = 
+	"<p class='pIndent'>And to think that I thought we were getting on so well. I was going to ask you if you wanted to vacation with me. I was even going to offer to pay. It's too late. Don't even bother trying to reload this page to appease me. It's not going to work. I'm going to know. You will never extract my vacation money from me now.</p>";
+}
+
+function rejectedThird() {
+	document.getElementById("thirdAct").innerHTML = 
+	"<p class='pIndent'>You might as well just look at this picture of me and my son. Maybe now you'll know who you're hurting by rejecting us.</p>" +
+	'<img src="assets/images/Scott.jpg" alt=Scott>';
+}
+
+
 		rejectedFirst();
 		rejectedSecond();
 		rejectedThird();
