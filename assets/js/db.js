@@ -1,3 +1,8 @@
+// Use
+// <script src="assets/js/db.js"></script>
+// to add dickbutt to your console
+
+
 console.log("                                    Nevergonn                                         ");
 console.log("                                agiveyouup,neverg                                     ");
 console.log("                            onnaletyoudownNevergonna                                  ");
