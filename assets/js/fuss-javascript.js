@@ -284,7 +284,10 @@ var sdee = 2;
                 nounArray[Math.floor(Math.random() * 4)]
             ".</p>";
             secondDone = true;
-           } 
+           } else {
+           		document.getElementById("secondAct").innerHTML =
+                "<h4>You Need Act One First</h4>"
+           }
  		}
  	
 
