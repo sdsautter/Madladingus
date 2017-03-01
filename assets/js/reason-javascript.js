@@ -6,6 +6,8 @@ var verbingArray = [];
 var adjArray = [];
 var advArray = [];
 var fakeExpletiveArray = [];
+var firstDone = false;
+var secondDone = false;
 
 var toLoad = confirm("This is your story. If you choose to accept this mission, you will be asked for many words in order to finish this story. You may even get up to 5 requests for one category, like nouns.")
 
@@ -56,57 +58,7 @@ function askFakeExpletive() {
 //These push the HTML for the paragraphs for their respective acts
 function firstAct() {
 	var userName = prompt("What is your name?");
-	document.getElementById("firstAct").innerHTML = 
-		"<p>Dear " + 
-		userName + ", </p><p><span class='firstcharacter'>I</span> write to you on this " +
-		nounArray[0].toLowerCase() + " to apologize. I know I wronged you when I " + 
-		verbPastArray[0].toLowerCase() + " on your very " + 
-		adjArray[0].toLowerCase() + " " +
-		nounArray[1].toLowerCase() + ". In my defense, I " + 
-		verbPastArray[0].toLowerCase() + " very " + 
-		advArray[0].toLowerCase() + ". Nevertheless, I must still apologize. If I may, I feel as if I have a " +
-		adjArray[1].toLowerCase() + " excuse, and feel a " +
-		adjArray[2].toLowerCase() + " need to explain myself.</p>" +
-		"<p class='pIndent'>You see, I was " +
-		verbingArray[0].toLowerCase() + " at the local " +
-		nounArray[2].toLowerCase() + " just the other day when all of a sudden a " +
-		nounArray[3].toLowerCase() + " came " +
-		verbingArray[1].toLowerCase() + " right out of the " + 
-		nounArray[4].toLowerCase() + ". What a sight it was to see. I had no other choice but to yell, 'Hey " +
-		properNounArray[0] + "! What is it that you do so " +
-		advArray[1].toLowerCase() + "?'</p> <p class='pIndent'>The " +
-		nounArray[3].toLowerCase() + " looked at me, and do you know what he said? Do you know what he " +
-		fakeExpletiveArray[0].toLowerCase() + "ing said?! He said, '" +
-		properNounArray[0].toLowerCase() + "? Who the " +
-		fakeExpletiveArray[0].toLowerCase() + " is " +
-		properNounArray[0] + "? If you're talking to me, you better check yourself before you " +
-		verbPresentArray[0].toLowerCase() + " yourself.'</p>"
-		;
-}
-
-function secondAct() {
-	askNoun();
-	document.getElementById("secondAct").innerHTML =  
-		"<p>Sorry, I don't have a second act yet, but I do have enough to prompt you for " + 
-		nounArray[5].toLowerCase() + 
-		".</p>" ;
-}
-
-function thirdAct() {
-	document.getElementById("thirdAct").innerHTML =  
-		"<p>You really think I have a first act after showing that I don't have a second act yet? Ha. Idiot. In case you're wondering though, here's all the nouns you've used so far:<br> " + 
-		nounArray[0].toLowerCase() + "<br>" +
-		nounArray[1].toLowerCase() + "<br>" +
-		nounArray[2].toLowerCase() + "<br>" +
-		nounArray[3].toLowerCase() + "<br>" +
-		nounArray[4].toLowerCase() + "<br>" +
-		nounArray[5].toLowerCase()
-}
-
-
-
-	window.onload = function(){
-		for (var i = 0; i < 5; i++) {
+	for (var i = 0; i < 5; i++) {
 			askNoun();
 		}
 
@@ -138,8 +90,65 @@ function thirdAct() {
 			askVerbPresent();
 		}
 	
-		firstAct();
+	document.getElementById("firstAct").innerHTML = 
+		"<p>Dear " + 
+		userName + ", </p><p><span class='firstcharacter'>I</span> write to you on this " +
+		nounArray[0].toLowerCase() + " to apologize. I know I wronged you when I " + 
+		verbPastArray[0].toLowerCase() + " on your very " + 
+		adjArray[0].toLowerCase() + " " +
+		nounArray[1].toLowerCase() + ". In my defense, I " + 
+		verbPastArray[0].toLowerCase() + " very " + 
+		advArray[0].toLowerCase() + ". Nevertheless, I must still apologize. If I may, I feel as if I have a " +
+		adjArray[1].toLowerCase() + " excuse, and feel a " +
+		adjArray[2].toLowerCase() + " need to explain myself.</p>" +
+		"<p class='pIndent'>You see, I was " +
+		verbingArray[0].toLowerCase() + " at the local " +
+		nounArray[2].toLowerCase() + " just the other day when all of a sudden a " +
+		nounArray[3].toLowerCase() + " came " +
+		verbingArray[1].toLowerCase() + " right out of the " + 
+		nounArray[4].toLowerCase() + ". What a sight it was to see. I had no other choice but to yell, 'Hey " +
+		properNounArray[0] + "! What is it that you do so " +
+		advArray[1].toLowerCase() + "?'</p> <p class='pIndent'>The " +
+		nounArray[3].toLowerCase() + " looked at me, and do you know what he said? Do you know what he " +
+		fakeExpletiveArray[0].toLowerCase() + "ing said?! He said, '" +
+		properNounArray[0].toLowerCase() + "? Who the " +
+		fakeExpletiveArray[0].toLowerCase() + " is " +
+		properNounArray[0] + "? If you're talking to me, you better check yourself before you " +
+		verbPresentArray[0].toLowerCase() + " yourself.'</p>"
+		;
+	firstDone = true;
+}
+
+function secondAct() {
+	askNoun();
+	document.getElementById("secondAct").innerHTML =  
+		"<p>Sorry, I don't have a second act yet, but I do have enough to prompt you for " + 
+		nounArray[5].toLowerCase() + 
+		".</p>" ;
+	secondDone = true;
+}
+
+function thirdAct() {
+	document.getElementById("thirdAct").innerHTML =  
+		"<p>You really think I have a first act after showing that I don't have a second act yet? Ha. Idiot. In case you're wondering though, here's all the nouns you've used so far:<br> " + 
+		nounArray[0].toLowerCase() + "<br>" +
+		nounArray[1].toLowerCase() + "<br>" +
+		nounArray[2].toLowerCase() + "<br>" +
+		nounArray[3].toLowerCase() + "<br>" +
+		nounArray[4].toLowerCase() + "<br>" +
+		nounArray[5].toLowerCase()
+}
+
+//I need to come back and play around with this. I want to make it so the acts don't start until they get clicked on, and you can't move on until you finish previous acts.
+document.getElementById("firstClick").onclick = firstAct();
+if (firstDone) {
+	document.getElementById("secondClick").onclick = secondAct();
+} else { 
+	document.getElementById("secondClick").onclick = function() {
+
+	document.getElementById("secondAct").innerHTML = "<h4>You Must Complete Act One First";
 	}
+} 
 	
 	} else {
 		//This will show up if they cancel the original confirmation
