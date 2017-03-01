@@ -127,7 +127,7 @@ function firstAct() {
 			askNoun();
 		}
 
-		
+
 		for (i = 0; i < 1; i++) {
 			askVerbPresent();
 		}
@@ -255,10 +255,12 @@ function firstAct() {
 }
 
 function secondAct() {
-	askNoun();
+
 	document.getElementById("secondAct").innerHTML =  
-		"<p class='pIndent'>Sorry, I don't have a second act yet, but I do have enough to prompt you for " + 
-		nounArray[4].toLowerCase() + 
+		"<p class='pIndent'>Sorry, I don't have a second act yet, but I do have enough to tell you that you look like a " +
+		nounArray[Math.floor(Math.random() * 4)] + " " +
+		verbingArray[0] + " a " +
+		nounArray[Math.floor(Math.random() * 4)]
 		".</p>" ;
 	secondDone = true;
 }
@@ -278,7 +280,6 @@ function thirdAct() {
 // 	document.getElementById("secondAct").innerHTML = "<h4>You Must Complete Act One First";
 // 	}
 // } 
-	firstAct();
 
 	} else {
 		//This will show up if they cancel the original confirmation
