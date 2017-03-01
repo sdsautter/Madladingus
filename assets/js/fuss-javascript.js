@@ -29,7 +29,7 @@ function askNoun() {
 }
 
 function askProperNoun() {
-	var properNoun = prompt("Give me a proper noun. Ex: Scott, Scotty, Scottie.");
+	var properNoun = prompt("Give me a proper noun for a man. Ex: Scott, Scotty, Scottie.");
 	nounProperArray.push(properNoun);
 }
 
@@ -101,32 +101,44 @@ function askDescriptionOfPerson () {
 //These push the HTML for the paragraphs for their respective acts
 function firstAct() {
 
-	for (var i = 0; i < 4; i++) {
-			askNoun();
+
+
+		for (i = 0; i < 2; i++) {
+			askProperNoun();
 		}
 
 		for (i = 0; i < 1; i++) {
 			askVerbPast();
 		}
 
-		for (i = 0; i < 5; i++) {
-			askAdjective();
+		for (i = 0; i < 2; i++) {
+			askDescriptionOfPerson();
 		}
 
 		for (i = 0; i < 2; i++) {
-			askDescriptionOfPerson();
+			askFamilyMember();
 		}
 
 		for (i = 0; i < 3; i++) {
 			askVerbing();
 		}
 
+		for (var i = 0; i < 4; i++) {
+			askNoun();
+		}
+
+		
+		for (i = 0; i < 1; i++) {
+			askVerbPresent();
+		}
+
+
 		for (i = 0; i < 2; i++) {
 			askVocalized();
 		}
 
-		for (i = 0; i < 2; i++) {
-			askProperNoun();
+		for (i = 0; i < 5; i++) {
+			askAdjective();
 		}
 
 		for (i = 0; i < 2; i++) {
@@ -141,20 +153,12 @@ function firstAct() {
 			askPlace();
 		}
 
-		for (i = 0; i < 2; i++) {
+		for (i = 0; i < 1; i++) {
 			askNumber();
 		}
 
 		for (i = 0; i < 2; i++) {
 			askPluralNouns();
-		}
-
-		for (i = 0; i < 2; i++) {
-			askFamilyMember();
-		}
-
-		for (i = 0; i < 1; i++) {
-			askVerbPresent();
 		}
 	
 	document.getElementById("firstAct").innerHTML = 
@@ -211,7 +215,7 @@ function firstAct() {
 		moreAdjectiveArray[0].toLowerCase() + " than " + 
 		nounArray[1].toLowerCase() + "ses.\"</p> <p class='pIndent'><i>Don't forget that this man is a " + 
 		adjectiveArray[1].toLowerCase() + " " +
-		descriptionOfPersonArray[0].toLowerCase() + ".</i></p> <p class='pIndent'>\"And further more,\" " +
+		descriptionOfPersonArray[0].toLowerCase() + ".</i></p> <p>\"And further more,\" " +
 		nounProperArray[0] + " continues while " +
 		verbingArray[0].toLowerCase() + " down the street, \"This " +
 		nounArray[0].toLowerCase() + " has a certain quality about it. A quality that shines in both it's subjective beauty, like a " +
@@ -221,7 +225,7 @@ function firstAct() {
 
 		"<p class='pIndent'>With the vigor of " + 
 		numberArray[0].toLowerCase() + " " +
-		nounPluralArray[1] + ", yet also " +
+		nounPluralArray[0] + ", yet also " +
 		adverbArray[1].toLowerCase() + ", " +
 		nounProperArray[1] + " " +
 		vocalizedArray[1].toLowerCase() + ", \"That's the most " +
@@ -265,16 +269,17 @@ function thirdAct() {
 }
 
 //I need to come back and play around with this. I want to make it so the acts don't start until they get clicked on, and you can't move on until you finish previous acts.
-document.getElementById("firstClick").onclick = firstAct();
-if (firstDone) {
-	document.getElementById("secondClick").onclick = secondAct();
-} else { 
-	document.getElementById("secondClick").onclick = function() {
+// document.getElementById("firstClick").onclick = firstAct();
+// if (firstDone) {
+// 	document.getElementById("secondClick").onclick = secondAct();
+// } else { 
+// 	document.getElementById("secondClick").onclick = function() {
 
-	document.getElementById("secondAct").innerHTML = "<h4>You Must Complete Act One First";
-	}
-} 
-	
+// 	document.getElementById("secondAct").innerHTML = "<h4>You Must Complete Act One First";
+// 	}
+// } 
+	firstAct();
+
 	} else {
 		//This will show up if they cancel the original confirmation
 function rejectedFirst() {
