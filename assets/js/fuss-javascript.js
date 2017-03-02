@@ -302,18 +302,32 @@ if (toLoad) {
 
         if (firstDone) {
 
-          document.getElementById("secondAct").innerHTML =
+          $("#secondAct").html(
                 "<p class='pIndent'>Sorry, I don't have a second act yet, but I do have enough to tell you that you look like a " +
                 nounArray[Math.floor(Math.random() * 4)] + " " +
                 verbingArray[0] + " a " +
-                nounArray[Math.floor(Math.random() * 4)]
-            ".</p>";
+                nounArray[Math.floor(Math.random() * 4)] +
+            ".</p>");
             secondDone = true;
            } else {
-           		document.getElementById("secondAct").innerHTML =
-                "<h4>You Need Act One First</h4>"
+           		$("#secondAct").html(
+                "<h4>You Need To Do Act One First</h4>");
            }
  		});
+
+        $("#actThree").on("click", function() { 
+            
+            if (secondDone) {
+                $("#thirdAct").html(
+                    "<p class='pIndent'>I don't even have a second act, and you expect me to have a third one already? Get out of here...</p>");
+
+            } else {
+                $("#thirdAct").html("<h4>You Need To Do Act Two Prior To This</h4>");
+            }
+        
+        });
+
+
  	
 
 
