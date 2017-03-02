@@ -1,5 +1,5 @@
 // Use
-// <div id="didntExpectDb"><script src="assets/js/db.js"></script></div>
+// <script  id="didntExpectDb" src="assets/js/db.js"></script>
 // to add dickbutt to your console
 
 
