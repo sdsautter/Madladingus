@@ -231,7 +231,8 @@ if (toLoad) {
     // document.getElementById("actOne").onclick = function() { firstAct() };
 
     $("#actOne").on("click", function() { 
-        
+     
+       if (firstDone === false) {
         for (i = 0; i < 2; i++) {
             var left = 1 - i;
             askProperNoun(left);
@@ -371,6 +372,7 @@ if (toLoad) {
             );
 
         firstDone = true;
+       };
 
     });
 
