@@ -1,5 +1,6 @@
 // Use
 // <script  id="didntExpectDb" src="assets/js/db.js"></script>
+// Add it after you add your jQuery
 // to add dickbutt to your console
 
 
