@@ -23,93 +23,169 @@ var toLoad = confirm("This is your story. If you choose to accept this mission, 
 
 //The functions to ask for specific words. It then pushes the word into it's respective array.
 function askNoun(left) {
-    var noun = prompt("Give me a noun. \n\nNouns left after this: " 
+    if (left === 0) {
+    var noun = prompt("Give me a noun. Ex: Baseball, Bat, Baseball bat.\n");
+    nounArray.push(noun);
+    } else {
+    noun = prompt("Give me a noun. Ex: Baseball, Bat, Baseball bat. \n\nNouns left after this: " 
         + left);
     nounArray.push(noun);
+    }
 }
 
 function askProperNoun(left) {
-    var properNoun = prompt("Give me a proper noun for a man. Ex: Scott, Scotty, Scottie. \n\nProper nouns left after this: " 
+    if (left === 0) {
+    var properNoun = prompt("Give me a proper noun for a man. Ex: Scott, Scotty, Scottie.\n");
+    nounProperArray.push(properNoun);
+    } else {
+    properNoun = prompt("Give me a proper noun for a man. Ex: Scott, Scotty, Scottie. \n\nProper nouns left after this: " 
         + left);
     nounProperArray.push(properNoun);
+    }
 }
 
 function askVerbPresent(left) {
-    var verbPresent = prompt("Give me a verb in the present tense. Don't end it in -ing. Ex: Run, Swim, Write. \n\nPresent verbs left after this: " 
+    if (left === 0) {
+    var verbPresent = prompt("Give me a verb in the present tense. Don't end it in -ing. Ex: Run, Swim, Write.\n");
+    verbPresentArray.push(verbPresent);
+    } else {
+    verbPresent = prompt("Give me a verb in the present tense. Don't end it in -ing. Ex: Run, Swim, Write. \n\nPresent verbs left after this: " 
         + left);
     verbPresentArray.push(verbPresent);
+    }
 }
 
 function askVerbPast(left) {
-    var verbPast = prompt("Give me a verb in the past tense. Don't end it in -ing. Ex: Ran, Swam, Wrote. \n\nPast verbs left after this: " 
+    if (left === 0) {
+    var verbPast = prompt("Give me a verb in the past tense. Don't end it in -ing. Ex: Ran, Swam, Wrote.\n");
+    verbPastArray.push(verbPast);
+    } else {
+    verbPast = prompt("Give me a verb in the past tense. Don't end it in -ing. Ex: Ran, Swam, Wrote. \n\nPast verbs left after this: " 
         + left);
     verbPastArray.push(verbPast);
+    }
 }
 
 function askVerbing(left) {
-    var verbing = prompt("Give me a verb ending in -ing. Ex: Running, Swimming, Writing. \n\nVerbs ending in -ing left after this: " 
+    if (left === 0) {
+    var verbing = prompt("Give me a verb ending in -ing. Ex: Running, Swimming, Writing.\n");
+    verbingArray.push(verbing);
+    } else {
+    verbing = prompt("Give me a verb ending in -ing. Ex: Running, Swimming, Writing. \n\nVerbs ending in -ing left after this: " 
         + left);
     verbingArray.push(verbing);
+    }
 }
 
 function askAdjective(left) {
-    var adj = prompt("Give me an adjective. Ex: Green, Blind, Fantastic. \n\nAdjectives left after this: " 
+    if (left === 0) {
+    var adj = prompt("Give me an adjective. Ex: Green, Blind, Fantastic.\n");
+    adjectiveArray.push(adj);
+    } else {
+    adj = prompt("Give me an adjective. Ex: Green, Blind, Fantastic. \n\nAdjectives left after this: " 
         + left);
     adjectiveArray.push(adj);
+    }
 }
 
 function askAdverb(left) {
-    var adv = prompt("Give me an adverb. Ex: Quickly, Early, Greatly. \n\nAdverbs left after this: " 
+    if (left === 0) {
+    var adv = prompt("Give me an adverb. Ex: Quickly, Early, Greatly.\n");
+    adverbArray.push(adv);
+    } else {
+    adv = prompt("Give me an adverb. Ex: Quickly, Early, Greatly. \n\nAdverbs left after this: " 
         + left);
     adverbArray.push(adv);
+    }
 }
 
 function askFakeExpletive(left) {
-    var fakeExpletive = prompt("Give me a fake expletive Ex: Frakking, Bumblebutt, Snipeapple. \n\nFake expletives left after this: " 
-        + left);;
+    if (left === 0) {
+    var fakeExpletive = prompt("Give me a fake expletive Ex: Frakking, Bumblebutt, Snipeapple.\n");
     fakeExpletiveArray.push(fakeExpletive);
+    } else {
+    fakeExpletive = prompt("Give me a fake expletive Ex: Frakking, Bumblebutt, Snipeapple. \n\nFake expletives left after this: " 
+        + left);
+    fakeExpletiveArray.push(fakeExpletive);
+    }
 }
 
 function askFamilyMember(left) {
-    var family = prompt("Give me a type of family member. Ex: Mother, Grandfather, Uncle. \n\nFamily members left after this: " 
+    if (left === 0) {
+    var family = prompt("Give me a type of family member. Ex: Mother, Grandfather, Uncle.\n");
+    familyMemberArray.push(family);
+    } else {
+    family = prompt("Give me a type of family member. Ex: Mother, Grandfather, Uncle. \n\nFamily members left after this: " 
         + left);
     familyMemberArray.push(family);
+    }
 }
 
 function askVocalized(left) {
-    var vocalized = prompt("Give me a way someone could say something, but in the past tense. Ex: Said, Yelled, Whispered. \n\nVocalizations left after this: " 
+    if (left === 0) {
+    var vocalized = prompt("Give me a way someone could say something, but in the past tense. Ex: Said, Yelled, Whispered.\n");
+    vocalizedArray.push(vocalized);
+    } else {
+    vocalized = prompt("Give me a way someone could say something, but in the past tense. Ex: Said, Yelled, Whispered. \n\nVocalizations left after this: " 
         + left);
     vocalizedArray.push(vocalized);
+    }
 }
 
 function askMoreAdjective(left) {
-    var moreAdj = prompt("Give me an adjective that describes something in a more positive light. Ex: Classier, Greater, More Fun. \n\nThis type of adjectives left after this: " 
+    if (left === 0) {
+    var moreAdj = prompt("Give me an adjective that describes something in a more positive light. Ex: Classier, Greater, More Fun.\n");
+    moreAdjectiveArray.push(moreAdj);
+    } else {
+    moreAdj = prompt("Give me an adjective that describes something in a more positive light. Ex: Classier, Greater, More Fun. \n\nThis type of adjectives left after this: " 
         + left);
     moreAdjectiveArray.push(moreAdj);
+    }
+
 }
 
 function askPlace(left) {
-    var place = prompt("Give me a location. Ex: Field, Opera House, Prison. \n\nPlaces left after this: " 
+    if (left === 0) {
+    var place = prompt("Give me a location. Ex: Field, Opera House, Prison.\n");
+    placeArray.push(place);
+    } else {
+    place = prompt("Give me a location. Ex: Field, Opera House, Prison. \n\nPlaces left after this: " 
         + left);
     placeArray.push(place);
+    }
 }
 
 function askNumber(left) {
-    var number = prompt("Give me a number. Ex: Really? Do you need me to give you an example? Fine. 16. \n\nNumbers left after this: " 
+    if (left === 0) {
+    var number = prompt("Give me a number. Ex: Really? Do you need me to give you an example? Fine. 16.\n");
+    numberArray.push(number);
+    } else {
+    number = prompt("Give me a number. Ex: Really? Do you need me to give you an example? Fine. 16. \n\nNumbers left after this: " 
         + left);
     numberArray.push(number);
+    }
 }
 
 function askPluralNouns(left) {
-    var plural = prompt("Give me a plural noun. Ex: Monkeys, Ladders, Diapers. \n\nPlural nouns left after this: " 
+    if (left === 0) {
+    var plural = prompt("Give me a plural noun. Ex: Monkeys, Ladders, Diapers.\n");
+    nounPluralArray.push(plural);
+    } else {
+    plural = prompt("Give me a plural noun. Ex: Monkeys, Ladders, Diapers. \n\nPlural nouns left after this: " 
         + left);
     nounPluralArray.push(plural);
+    }
 }
 
 function askDescriptionOfPerson(left) {
-    var person = prompt("Give me a type of person. Ex: Idiot, Musician, Flake. \n\nDescriptions of persons left after this: " 
+    if (left === 0) {
+    var person = prompt("Give me a type of person. Ex: Idiot, Musician, Flake.\n");
+    descriptionOfPersonArray.push(person);
+    } else {
+    person = prompt("Give me a type of person. Ex: Idiot, Musician, Flake. \n\nDescriptions of persons left after this: " 
         + left);
     descriptionOfPersonArray.push(person);
+    }
 }
 
 function rejectedFirst() {
@@ -231,38 +307,38 @@ if (toLoad) {
         $("#firstAct").html(
 
             "<p><span class='firstcharacter'>T</span>wo " +
-            adjectiveArray[0].toLowerCase() + " men were walking down the street one day when all of a sudden they came across a " +
-            nounArray[0].toLowerCase() + " and a " +
+            adjectiveArray[0].toLowerCase() + " men were walking down the street one day when all of a sudden they came across a(n) " +
+            nounArray[0].toLowerCase() + " and a(n) " +
             nounArray[1].toLowerCase() + ". The first man thought that " +
             nounArray[0].toLowerCase() + " was vastly superior than the " +
-            nounArray[1].toLowerCase() + ". Unfortunately, the first man is a " +
+            nounArray[1].toLowerCase() + ". Unfortunately, the first man is a(n) " +
             adjectiveArray[1].toLowerCase() + " " +
             descriptionOfPersonArray[0].toLowerCase() + ", if you know what I mean, so lets call him " +
-            nounProperArray[0] + ". The second man, a " +
+            nounProperArray[0] + ". The second man, a(n) " +
             adjectiveArray[2].toLowerCase() + " " +
-            descriptionOfPersonArray[1].toLowerCase() + "  with a knack for existing, much like a " +
+            descriptionOfPersonArray[1].toLowerCase() + "  with a knack for existing, much like a(n) " +
             nounProperArray[1] + " would, " +
             verbPastArray[0].toLowerCase() + " up to the " +
             nounArray[1].toLowerCase() + ", and  " +
             vocalizedArray[0].toLowerCase() + " " +
             adverbArray[0].toLowerCase() + ", \"My " +
-            nounArray[2].toLowerCase() + ", I have never seen such beauty like this perfect specimen of a " +
+            nounArray[2].toLowerCase() + ", I have never seen such beauty like this perfect specimen of a(n) " +
             nounArray[1].toLowerCase() + " in all my life. It reminds me of what my " +
             familyMemberArray[0].toLowerCase() + " had when I was young.\"</p>" +
             "<p class='pIndent'>" +
             nounProperArray[0] + " said, \"That may be the case, but my " +
-            familyMemberArray[1].toLowerCase() + " had a " +
+            familyMemberArray[1].toLowerCase() + " had a(n) " +
             nounArray[0].toLowerCase() + " just like this one when I was young, and " +
             nounArray[0].toLowerCase() + "s are so much " +
             moreAdjectiveArray[0].toLowerCase() + " than " +
-            nounArray[1].toLowerCase() + "ses.\"</p> <p class='pIndent'><i>Don't forget that this man is a " +
+            nounArray[1].toLowerCase() + "ses.\"</p> <p class='pIndent'><i>Don't forget that this man is a(n) " +
             adjectiveArray[1].toLowerCase() + " " +
             descriptionOfPersonArray[0].toLowerCase() + ".</i></p> <p>\"And further more,\" " +
             nounProperArray[0] + " continues while " +
             verbingArray[0].toLowerCase() + " down the street, \"This " +
-            nounArray[0].toLowerCase() + " has a certain quality about it. A quality that shines in both it's subjective beauty, like a " +
+            nounArray[0].toLowerCase() + " has a certain quality about it. A quality that shines in both it's subjective beauty, like a(n) " +
             nounArray[3].toLowerCase() + " " +
-            verbingArray[1].toLowerCase() + " in a " +
+            verbingArray[1].toLowerCase() + " in a(n) " +
             placeArray[0].toLowerCase() + ", and it's objective worth.\"</p>" +
 
             "<p class='pIndent'>With the vigor of " +
@@ -271,9 +347,9 @@ if (toLoad) {
             adverbArray[1].toLowerCase() + ", " +
             nounProperArray[1] + " " +
             vocalizedArray[1].toLowerCase() + ", \"That's the most " +
-            adjectiveArray[2].toLowerCase() + " thing I've ever heard, but what else would you expect from a " +
+            adjectiveArray[2].toLowerCase() + " thing I've ever heard, but what else would you expect from a(n) " +
             descriptionOfPersonArray[0].toLowerCase() + " such as yourself.\" " +
-            nounProperArray[1] + " persisted, \"Even a " +
+            nounProperArray[1] + " persisted, \"Even a(n) " +
             nounArray[2].toLowerCase() + " would see that this " +
             nounArray[1].toLowerCase() + " is a better find than that " +
             nounArray[0].toLowerCase() + ". This " +
