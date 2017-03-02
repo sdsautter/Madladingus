@@ -27,7 +27,7 @@ function askNoun(left) {
     var noun = prompt("Give me a noun. Ex: Baseball, Bat, Baseball bat.\n");
     nounArray.push(noun);
     } else {
-    noun = prompt("Give me a noun. Ex: Baseball, Bat, Baseball bat. \n\nNouns left after this: " 
+    noun = prompt("Give me a noun. Ex: Baseball, Bat, Baseball bat. \n\nNouns left: " 
         + left);
     nounArray.push(noun);
     }
@@ -38,7 +38,7 @@ function askProperNoun(left) {
     var properNoun = prompt("Give me a proper noun for a man. Ex: Scott, Scotty, Scottie.\n");
     nounProperArray.push(properNoun);
     } else {
-    properNoun = prompt("Give me a proper noun for a man. Ex: Scott, Scotty, Scottie. \n\nProper nouns left after this: " 
+    properNoun = prompt("Give me a proper noun for a man. Ex: Scott, Scotty, Scottie. \n\nProper nouns left: " 
         + left);
     nounProperArray.push(properNoun);
     }
@@ -49,7 +49,7 @@ function askVerbPresent(left) {
     var verbPresent = prompt("Give me a verb in the present tense. Don't end it in -ing. Ex: Run, Swim, Write.\n");
     verbPresentArray.push(verbPresent);
     } else {
-    verbPresent = prompt("Give me a verb in the present tense. Don't end it in -ing. Ex: Run, Swim, Write. \n\nPresent verbs left after this: " 
+    verbPresent = prompt("Give me a verb in the present tense. Don't end it in -ing. Ex: Run, Swim, Write. \n\nPresent verbs left: " 
         + left);
     verbPresentArray.push(verbPresent);
     }
@@ -60,7 +60,7 @@ function askVerbPast(left) {
     var verbPast = prompt("Give me a verb in the past tense. Don't end it in -ing. Ex: Ran, Swam, Wrote.\n");
     verbPastArray.push(verbPast);
     } else {
-    verbPast = prompt("Give me a verb in the past tense. Don't end it in -ing. Ex: Ran, Swam, Wrote. \n\nPast verbs left after this: " 
+    verbPast = prompt("Give me a verb in the past tense. Don't end it in -ing. Ex: Ran, Swam, Wrote. \n\nPast verbs left: " 
         + left);
     verbPastArray.push(verbPast);
     }
@@ -71,7 +71,7 @@ function askVerbing(left) {
     var verbing = prompt("Give me a verb ending in -ing. Ex: Running, Swimming, Writing.\n");
     verbingArray.push(verbing);
     } else {
-    verbing = prompt("Give me a verb ending in -ing. Ex: Running, Swimming, Writing. \n\nVerbs ending in -ing left after this: " 
+    verbing = prompt("Give me a verb ending in -ing. Ex: Running, Swimming, Writing. \n\nVerbs ending in -ing left: " 
         + left);
     verbingArray.push(verbing);
     }
@@ -82,7 +82,7 @@ function askAdjective(left) {
     var adj = prompt("Give me an adjective. Ex: Green, Blind, Fantastic.\n");
     adjectiveArray.push(adj);
     } else {
-    adj = prompt("Give me an adjective. Ex: Green, Blind, Fantastic. \n\nAdjectives left after this: " 
+    adj = prompt("Give me an adjective. Ex: Green, Blind, Fantastic. \n\nAdjectives left: " 
         + left);
     adjectiveArray.push(adj);
     }
@@ -93,7 +93,7 @@ function askAdverb(left) {
     var adv = prompt("Give me an adverb. Ex: Quickly, Early, Greatly.\n");
     adverbArray.push(adv);
     } else {
-    adv = prompt("Give me an adverb. Ex: Quickly, Early, Greatly. \n\nAdverbs left after this: " 
+    adv = prompt("Give me an adverb. Ex: Quickly, Early, Greatly. \n\nAdverbs left: " 
         + left);
     adverbArray.push(adv);
     }
@@ -104,7 +104,7 @@ function askFakeExpletive(left) {
     var fakeExpletive = prompt("Give me a fake expletive Ex: Frakking, Bumblebutt, Snipeapple.\n");
     fakeExpletiveArray.push(fakeExpletive);
     } else {
-    fakeExpletive = prompt("Give me a fake expletive Ex: Frakking, Bumblebutt, Snipeapple. \n\nFake expletives left after this: " 
+    fakeExpletive = prompt("Give me a fake expletive Ex: Frakking, Bumblebutt, Snipeapple. \n\nFake expletives left: " 
         + left);
     fakeExpletiveArray.push(fakeExpletive);
     }
@@ -115,7 +115,7 @@ function askFamilyMember(left) {
     var family = prompt("Give me a type of family member. Ex: Mother, Grandfather, Uncle.\n");
     familyMemberArray.push(family);
     } else {
-    family = prompt("Give me a type of family member. Ex: Mother, Grandfather, Uncle. \n\nFamily members left after this: " 
+    family = prompt("Give me a type of family member. Ex: Mother, Grandfather, Uncle. \n\nFamily members left: " 
         + left);
     familyMemberArray.push(family);
     }
@@ -126,7 +126,7 @@ function askVocalized(left) {
     var vocalized = prompt("Give me a way someone could say something, but in the past tense. Ex: Said, Yelled, Whispered.\n");
     vocalizedArray.push(vocalized);
     } else {
-    vocalized = prompt("Give me a way someone could say something, but in the past tense. Ex: Said, Yelled, Whispered. \n\nVocalizations left after this: " 
+    vocalized = prompt("Give me a way someone could say something, but in the past tense. Ex: Said, Yelled, Whispered. \n\nVocalizations left: " 
         + left);
     vocalizedArray.push(vocalized);
     }
@@ -137,7 +137,7 @@ function askMoreAdjective(left) {
     var moreAdj = prompt("Give me an adjective that describes something in a more positive light. Ex: Classier, Greater, More Fun.\n");
     moreAdjectiveArray.push(moreAdj);
     } else {
-    moreAdj = prompt("Give me an adjective that describes something in a more positive light. Ex: Classier, Greater, More Fun. \n\nThis type of adjectives left after this: " 
+    moreAdj = prompt("Give me an adjective that describes something in a more positive light. Ex: Classier, Greater, More Fun. \n\nThis type of adjectives left: " 
         + left);
     moreAdjectiveArray.push(moreAdj);
     }
@@ -149,7 +149,7 @@ function askPlace(left) {
     var place = prompt("Give me a location. Ex: Field, Opera House, Prison.\n");
     placeArray.push(place);
     } else {
-    place = prompt("Give me a location. Ex: Field, Opera House, Prison. \n\nPlaces left after this: " 
+    place = prompt("Give me a location. Ex: Field, Opera House, Prison. \n\nPlaces left: " 
         + left);
     placeArray.push(place);
     }
@@ -160,7 +160,7 @@ function askNumber(left) {
     var number = prompt("Give me a number. Ex: Really? Do you need me to give you an example? Fine. 16.\n");
     numberArray.push(number);
     } else {
-    number = prompt("Give me a number. Ex: Really? Do you need me to give you an example? Fine. 16. \n\nNumbers left after this: " 
+    number = prompt("Give me a number. Ex: Really? Do you need me to give you an example? Fine. 16. \n\nNumbers left: " 
         + left);
     numberArray.push(number);
     }
@@ -171,7 +171,7 @@ function askPluralNouns(left) {
     var plural = prompt("Give me a plural noun. Ex: Monkeys, Ladders, Diapers.\n");
     nounPluralArray.push(plural);
     } else {
-    plural = prompt("Give me a plural noun. Ex: Monkeys, Ladders, Diapers. \n\nPlural nouns left after this: " 
+    plural = prompt("Give me a plural noun. Ex: Monkeys, Ladders, Diapers. \n\nPlural nouns left: " 
         + left);
     nounPluralArray.push(plural);
     }
@@ -182,7 +182,7 @@ function askDescriptionOfPerson(left) {
     var person = prompt("Give me a type of person. Ex: Idiot, Musician, Flake.\n");
     descriptionOfPersonArray.push(person);
     } else {
-    person = prompt("Give me a type of person. Ex: Idiot, Musician, Flake. \n\nDescriptions of persons left after this: " 
+    person = prompt("Give me a type of person. Ex: Idiot, Musician, Flake. \n\nDescriptions of persons left: " 
         + left);
     descriptionOfPersonArray.push(person);
     }
