@@ -17,83 +17,98 @@ var numberArray = [];
 var firstDone = false;
 var secondDone = false;
 
-var toLoad = confirm("This is your story. If you choose to accept this mission, you will be asked for many words in order to finish this story. You may even get up to 5 requests for one category, like nouns.")
+var toLoad = confirm("This is your story. If you choose to accept this mission, you will be asked for many words in order to finish this story. You may even get up to 5 requests for one category, like nouns.");
 
 
 
 //The functions to ask for specific words. It then pushes the word into it's respective array.
-function askNoun() {
-    var noun = prompt("Give me a noun.");
+function askNoun(left) {
+    var noun = prompt("Give me a noun. \n\nNouns left after this: " 
+        + left);
     nounArray.push(noun);
 }
 
-function askProperNoun() {
-    var properNoun = prompt("Give me a proper noun for a man. Ex: Scott, Scotty, Scottie.");
+function askProperNoun(left) {
+    var properNoun = prompt("Give me a proper noun for a man. Ex: Scott, Scotty, Scottie. \n\nProper nouns left after this: " 
+        + left);
     nounProperArray.push(properNoun);
 }
 
-function askVerbPresent() {
-    var verbPresent = prompt("Give me a verb in the present tense. Don't end it in -ing. Ex: Run, Swim, Write.")
+function askVerbPresent(left) {
+    var verbPresent = prompt("Give me a verb in the present tense. Don't end it in -ing. Ex: Run, Swim, Write. \n\nPresent verbs left after this: " 
+        + left);
     verbPresentArray.push(verbPresent);
 }
 
-function askVerbPast() {
-    var verbPast = prompt("Give me a verb in the past tense. Don't end it in -ing. Ex: Ran, Swam, Wrote.")
+function askVerbPast(left) {
+    var verbPast = prompt("Give me a verb in the past tense. Don't end it in -ing. Ex: Ran, Swam, Wrote. \n\nPast verbs left after this: " 
+        + left);
     verbPastArray.push(verbPast);
 }
 
-function askVerbing() {
-    var verbing = prompt("Give me a verb ending in -ing. Ex: Running, Swimming, Writing.")
+function askVerbing(left) {
+    var verbing = prompt("Give me a verb ending in -ing. Ex: Running, Swimming, Writing. \n\nVerbs ending in -ing left after this: " 
+        + left);
     verbingArray.push(verbing);
 }
 
-function askAdjective() {
-    var adj = prompt("Give me an adjective. Ex: Green, Blind, Fantastic.")
+function askAdjective(left) {
+    var adj = prompt("Give me an adjective. Ex: Green, Blind, Fantastic. \n\nAdjectives left after this: " 
+        + left);
     adjectiveArray.push(adj);
 }
 
-function askAdverb() {
-    var adv = prompt("Give me an adverb. Ex: Quickly, Early, Greatly.")
+function askAdverb(left) {
+    var adv = prompt("Give me an adverb. Ex: Quickly, Early, Greatly. \n\nAdverbs left after this: " 
+        + left);
     adverbArray.push(adv);
 }
 
-function askFakeExpletive() {
-    var fakeExpletive = prompt("Give me a fake expletive Ex: Frakking, Bumblebutt, Snipeapple");
+function askFakeExpletive(left) {
+    var fakeExpletive = prompt("Give me a fake expletive Ex: Frakking, Bumblebutt, Snipeapple. \n\nFake expletives left after this: " 
+        + left);;
     fakeExpletiveArray.push(fakeExpletive);
 }
 
-function askFamilyMember() {
-    var family = prompt("Give me a type of family member. Ex: Mother, Grandfather, Uncle.")
+function askFamilyMember(left) {
+    var family = prompt("Give me a type of family member. Ex: Mother, Grandfather, Uncle. \n\nFamily members left after this: " 
+        + left);
     familyMemberArray.push(family);
 }
 
-function askVocalized() {
-    var vocalized = prompt("Give me a way someone could say something, but in the past tense. Ex: Said, Yelled, Whispered.")
+function askVocalized(left) {
+    var vocalized = prompt("Give me a way someone could say something, but in the past tense. Ex: Said, Yelled, Whispered. \n\nVocalizations left after this: " 
+        + left);
     vocalizedArray.push(vocalized);
 }
 
-function askMoreAdjective() {
-    var moreAdj = prompt("Give me an adjective that describes something in a more positive light. Ex: Classier, Greater, More Fun.")
+function askMoreAdjective(left) {
+    var moreAdj = prompt("Give me an adjective that describes something in a more positive light. Ex: Classier, Greater, More Fun. \n\nThis type of adjectives left after this: " 
+        + left);
     moreAdjectiveArray.push(moreAdj);
 }
 
-function askPlace() {
-    var place = prompt("Give me a location. Ex: Field, Opera House, Prison.")
+function askPlace(left) {
+    var place = prompt("Give me a location. Ex: Field, Opera House, Prison. \n\nPlaces left after this: " 
+        + left);
     placeArray.push(place);
 }
 
-function askNumber() {
-    var number = prompt("Give me a number. Ex: Really? Do you need me to give you an example? Fine. 16.")
+function askNumber(left) {
+    var number = prompt("Give me a number. Ex: Really? Do you need me to give you an example? Fine. 16. \n\nNumbers left after this: " 
+        + left);
     numberArray.push(number);
 }
 
-function askPluralNouns() {
-    var plural = prompt("Give me a plural noun. Ex: Monkeys, Ladders, Diapers.")
+function askPluralNouns(left) {
+    var plural = prompt("Give me a plural noun. Ex: Monkeys, Ladders, Diapers. \n\nPlural nouns left after this: " 
+        + left);
     nounPluralArray.push(plural);
 }
 
-function askDescriptionOfPerson() {
-    var person = prompt("Give me a type of person. Ex: Idiot, Musician, Flake.")
+function askDescriptionOfPerson(left) {
+    var person = prompt("Give me a type of person. Ex: Idiot, Musician, Flake. \n\nDescriptions of persons left after this: " 
+        + left);
     descriptionOfPersonArray.push(person);
 }
 
@@ -137,70 +152,83 @@ if (toLoad) {
     //If they agree to go on the mission this, this makes it so if they click the first act
     //on the HTML, then it will go through the first act process
 
-    document.getElementById("actOne").onclick = function() { firstAct() };
+    // document.getElementById("actOne").onclick = function() { firstAct() };
 
-
-
-    function firstAct() {
+    $("#actOne").on("click", function() { 
+        
         for (i = 0; i < 2; i++) {
-            askProperNoun();
+            var left = 1 - i;
+            askProperNoun(left);
         }
 
         for (i = 0; i < 1; i++) {
-            askVerbPast();
+            var left = 0 - i;
+            askVerbPast(left);
         }
 
         for (i = 0; i < 2; i++) {
-            askDescriptionOfPerson();
+            var left = 1 - i;
+            askDescriptionOfPerson(left);
         }
 
         for (i = 0; i < 2; i++) {
-            askFamilyMember();
+            var left = 1 - i;
+            askFamilyMember(left);
         }
 
         for (i = 0; i < 3; i++) {
-            askVerbing();
+            var left = 2 - i;
+            askVerbing(left);
         }
 
         for (var i = 0; i < 4; i++) {
-            askNoun();
+            var left = 3 - i;
+            askNoun(left);
         }
 
 
         for (i = 0; i < 1; i++) {
-            askVerbPresent();
+            var left = 0 - i;
+            askVerbPresent(left);
         }
 
 
         for (i = 0; i < 2; i++) {
-            askVocalized();
+            var left = 1 - i;
+            askVocalized(left);
         }
 
         for (i = 0; i < 5; i++) {
-            askAdjective();
+            var left = 4 - i;
+            askAdjective(left);
         }
 
         for (i = 0; i < 2; i++) {
-            askAdverb();
+            var left = 1 - i;
+            askAdverb(left);
         }
 
         for (i = 0; i < 1; i++) {
-            askMoreAdjective();
+            var left = 0 - i;
+            askMoreAdjective(left);
         }
 
         for (i = 0; i < 1; i++) {
-            askPlace();
+            var left = 0 - i;
+            askPlace(left);
         }
 
         for (i = 0; i < 1; i++) {
-            askNumber();
+            var left = 0 - i;
+            askNumber(left);
         }
 
         for (i = 0; i < 2; i++) {
-            askPluralNouns();
+            var left = 1 - i;
+            askPluralNouns(left);
         }
 
-        document.getElementById("firstAct").innerHTML =
+        $("#firstAct").html(
 
             "<p><span class='firstcharacter'>T</span>wo " +
             adjectiveArray[0].toLowerCase() + " men were walking down the street one day when all of a sudden they came across a " +
@@ -264,14 +292,13 @@ if (toLoad) {
             nounProperArray[1] + " fainted, hitting the ground like a stack of " +
             verbingArray[2].toLowerCase() + " " +
             nounPluralArray[1].toLowerCase() + " from the sheer disgust.</p>"
+            );
 
         firstDone = true;
 
-    }
+    });
 
-        document.getElementById("actTwo").onclick = function() {secondAct()};
-
-        function secondAct() {
+        $("#actTwo").on("click", function() {
 
         if (firstDone) {
 
@@ -286,7 +313,7 @@ if (toLoad) {
            		document.getElementById("secondAct").innerHTML =
                 "<h4>You Need Act One First</h4>"
            }
- 		}
+ 		});
  	
 
 
