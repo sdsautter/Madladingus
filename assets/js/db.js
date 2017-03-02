@@ -1,5 +1,5 @@
 // Use
-// <script src="assets/js/db.js"></script>
+// <div id="didntExpectDb"><script src="assets/js/db.js"></script></div>
 // to add dickbutt to your console
 
 
@@ -54,3 +54,5 @@ console.log("                            ieandh  urty                           
 console.log("                             ouNevergon                                               ");
 console.log("                               nagivey                                                ");
 console.log("                                 ouu                                                  ");
+
+$("#didntExpectDb").remove();

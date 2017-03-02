@@ -23,7 +23,7 @@ var toLoad = confirm("This is your story. If you choose to accept this mission, 
 
 //The functions to ask for specific words. It then pushes the word into it's respective array.
 function askNoun() {
-    var noun = prompt("Give me a noun");
+    var noun = prompt("Give me a noun.");
     nounArray.push(noun);
 }
 
@@ -268,8 +268,6 @@ if (toLoad) {
         firstDone = true;
 
     }
-
-var sdee = 2;
 
         document.getElementById("actTwo").onclick = function() {secondAct()};
 
