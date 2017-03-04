@@ -188,6 +188,17 @@ function askDescriptionOfPerson(left) {
     }
 }
 
+//Function to make a be an if the next word starts with a vowel
+function aAn(nextWord) {
+    if ((nextWord.charAt(0) === "a")  || (nextWord.charAt(0) === "A")  ||(nextWord.charAt(0) === "e")  ||(nextWord.charAt(0) === "E")  ||(nextWord.charAt(0) === "I")  ||(nextWord.charAt(0) === "i")  || (nextWord.charAt(0) === "o")  ||(nextWord.charAt(0) === "O")  || (nextWord.charAt(0) === "u") || (nextWord.charAt(0) === "U")) {
+        return "an ";
+    } else {
+        return "a ";
+    }
+} 
+
+
+//This will appear if they click cancel on original prompt
 function rejectedFirst() {
     document.getElementById("firstAct").innerHTML =
         "<p class='pIndent'>I put together this great ad-liberating story, and you choose to just skip it? I thought we were pals. You will <strong>rue</strong> this day.</p>";
@@ -308,38 +319,38 @@ if (toLoad) {
         $("#firstAct").html(
 
             "<p><span class='firstcharacter'>T</span>wo " +
-            adjectiveArray[0].toLowerCase() + " men were walking down the street one day when all of a sudden they came across a(n) " +
-            nounArray[0].toLowerCase() + " and a(n) " +
+            adjectiveArray[0].toLowerCase() + " men were walking down the street one day when all of a sudden they came across " + aAn(nounArray[0]) +
+            nounArray[0].toLowerCase() + " and " + aAn(nounArray[1]) +
             nounArray[1].toLowerCase() + ". The first man thought that " +
             nounArray[0].toLowerCase() + " was vastly superior than the " +
-            nounArray[1].toLowerCase() + ". Unfortunately, the first man is a(n) " +
+            nounArray[1].toLowerCase() + ". Unfortunately, the first man is " + aAn(adjectiveArray[1]) +
             adjectiveArray[1].toLowerCase() + " " +
             descriptionOfPersonArray[0].toLowerCase() + ", if you know what I mean, so lets call him " +
-            nounProperArray[0] + ". The second man, a(n) " +
+            nounProperArray[0] + ". The second man, " + aAn(adjectiveArray[2]) +
             adjectiveArray[2].toLowerCase() + " " +
-            descriptionOfPersonArray[1].toLowerCase() + "  with a knack for existing, much like a(n) " +
+            descriptionOfPersonArray[1].toLowerCase() + "  with a knack for existing, much like " + aAn(nounProperArray[1]) +
             nounProperArray[1] + " would, " +
             verbPastArray[0].toLowerCase() + " up to the " +
             nounArray[1].toLowerCase() + ", and  " +
             vocalizedArray[0].toLowerCase() + " " +
             adverbArray[0].toLowerCase() + ", \"My " +
-            nounArray[2].toLowerCase() + ", I have never seen such beauty like this perfect specimen of a(n) " +
+            nounArray[2].toLowerCase() + ", I have never seen such beauty like this perfect specimen of " + aAn(nounArray[1]) +
             nounArray[1].toLowerCase() + " in all my life. It reminds me of what my " +
             familyMemberArray[0].toLowerCase() + " had when I was young.\"</p>" +
             "<p class='pIndent'>" +
             nounProperArray[0] + " said, \"That may be the case, but my " +
-            familyMemberArray[1].toLowerCase() + " had a(n) " +
+            familyMemberArray[1].toLowerCase() + " had " + aAn(nounArray[0]) +
             nounArray[0].toLowerCase() + " just like this one when I was young, and " +
             nounArray[0].toLowerCase() + "s are so much " +
             moreAdjectiveArray[0].toLowerCase() + " than " +
-            nounArray[1].toLowerCase() + "ses.\"</p> <p class='pIndent'><i>Don't forget that this man is a(n) " +
+            nounArray[1].toLowerCase() + "ses.\"</p> <p class='pIndent'><i>Don't forget that this man is " + aAn(adjectiveArray[1]) +
             adjectiveArray[1].toLowerCase() + " " +
             descriptionOfPersonArray[0].toLowerCase() + ".</i></p> <p>\"And further more,\" " +
             nounProperArray[0] + " continues while " +
             verbingArray[0].toLowerCase() + " down the street, \"This " +
-            nounArray[0].toLowerCase() + " has a certain quality about it. A quality that shines in both it's subjective beauty, like a(n) " +
+            nounArray[0].toLowerCase() + " has a certain quality about it. A quality that shines in both it's subjective beauty, like " + aAn(nounArray[3]) +
             nounArray[3].toLowerCase() + " " +
-            verbingArray[1].toLowerCase() + " in a(n) " +
+            verbingArray[1].toLowerCase() + " in " + aAn(placeArray[0]) +
             placeArray[0].toLowerCase() + ", and it's objective worth.\"</p>" +
 
             "<p class='pIndent'>With the vigor of " +
@@ -348,9 +359,9 @@ if (toLoad) {
             adverbArray[1].toLowerCase() + ", " +
             nounProperArray[1] + " " +
             vocalizedArray[1].toLowerCase() + ", \"That's the most " +
-            adjectiveArray[2].toLowerCase() + " thing I've ever heard, but what else would you expect from a(n) " +
+            adjectiveArray[2].toLowerCase() + " thing I've ever heard, but what else would you expect from " + aAn(descriptionOfPersonArray[0]) +
             descriptionOfPersonArray[0].toLowerCase() + " such as yourself.\" " +
-            nounProperArray[1] + " persisted, \"Even a(n) " +
+            nounProperArray[1] + " persisted, \"Even " + aAn(nounArray[2]) +
             nounArray[2].toLowerCase() + " would see that this " +
             nounArray[1].toLowerCase() + " is a better find than that " +
             nounArray[0].toLowerCase() + ". This " +
