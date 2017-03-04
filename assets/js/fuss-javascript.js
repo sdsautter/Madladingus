@@ -16,6 +16,7 @@ var numberArray = [];
 
 var firstDone = false;
 var secondDone = false;
+var thirdDone = false;
 
 var toLoad = confirm("This is your story. If you choose to accept this mission, you will be asked for many words in order to finish this story. You may even get up to 5 requests for one category, like nouns.");
 
@@ -219,16 +220,6 @@ function rejectedThird() {
 // function firstAct() {
 // }
 
-function secondAct() {
-
-    document.getElementById("secondAct").innerHTML =
-        "<p class='pIndent'>Sorry, I don't have a second act yet, but I do have enough to tell you that you look like a " +
-        nounArray[Math.floor(Math.random() * 4)] + " " +
-        verbingArray[0] + " a " +
-        nounArray[Math.floor(Math.random() * 4)]
-    ".</p>";
-    secondDone = true;
-}
 
 function thirdAct() {
     document.getElementById("thirdAct").innerHTML =
@@ -389,7 +380,7 @@ if (toLoad) {
 
         $("#actTwo").on("click", function() {
 
-        if (firstDone) {
+        if (firstDone && (secondDone === false))  {
 
           $("#secondAct").html(
                 "<p class='pIndent'>Sorry, I don't have a second act yet, but I do have enough to tell you that you look like a " +
@@ -398,7 +389,7 @@ if (toLoad) {
                 nounArray[Math.floor(Math.random() * 4)] +
             ".</p>");
             secondDone = true;
-           } else {
+           } else if (firstDone === false) {
            		$("#secondAct").html(
                 "<h4>You Need To Do Act One First</h4>");
            }
@@ -406,11 +397,12 @@ if (toLoad) {
 
         $("#actThree").on("click", function() { 
             
-            if (secondDone) {
+            if (secondDone && (thirdDone === false)) {
                 $("#thirdAct").html(
                     "<p class='pIndent'>I don't even have a second act, and you expect me to have a third one already? Get out of here...</p>");
+                thirdDone = true;
 
-            } else {
+            } else if (secondDone === false) {
                 $("#thirdAct").html("<h4>You Need To Do Act Two Prior To This</h4>");
             }
         
